@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Krisp + Whisper Demo</title>
+  <link rel="stylesheet" href="/src/style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Krisp NC + Whisper STT Demo</h1>
+
+    <div class="status-bar">
+      <span id="krisp-status" class="status">Krisp: Not loaded</span>
+      <span id="recording-status" class="status">Ready</span>
+    </div>
+
+    <div class="controls">
+      <button id="btn-record" disabled>Record</button>
+      <button id="btn-stop" disabled>Stop</button>
+      <button id="btn-play" disabled>Play</button>
+      <button id="btn-transcribe" disabled>Transcribe</button>
+    </div>
+
+    <div class="toggle-section">
+      <label>
+        <input type="checkbox" id="krisp-toggle" disabled />
+        Enable Krisp Noise Cancellation
+      </label>
+    </div>
+
+    <div class="audio-section">
+      <h3>Recorded Audio</h3>
+      <audio id="audio-player" controls></audio>
+    </div>
+
+    <div class="transcript-section">
+      <h3>Transcription</h3>
+      <div id="transcript" class="transcript-box">
+        <em>Record audio and click "Transcribe" to see results...</em>
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>

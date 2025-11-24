@@ -1,0 +1,116 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background: #1a1a1a;
+  color: #fff;
+}
+
+.container {
+  background: #2a2a2a;
+  border-radius: 12px;
+  padding: 24px;
+}
+
+h1 {
+  margin-top: 0;
+  font-size: 1.5rem;
+}
+
+.status-bar {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.status {
+  padding: 6px 12px;
+  background: #333;
+  border-radius: 6px;
+  font-size: 0.85rem;
+}
+
+.status.active {
+  background: #2d5a27;
+}
+
+.status.recording {
+  background: #8b2020;
+}
+
+.controls {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+button {
+  padding: 12px 24px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  background: #4a4a4a;
+  color: #fff;
+  transition: background 0.2s;
+}
+
+button:hover:not(:disabled) {
+  background: #5a5a5a;
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+#btn-record:not(:disabled) {
+  background: #c0392b;
+}
+
+#btn-transcribe:not(:disabled) {
+  background: #2980b9;
+}
+
+.toggle-section {
+  margin-bottom: 20px;
+}
+
+.toggle-section label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+.audio-section, .transcript-section {
+  margin-top: 20px;
+}
+
+h3 {
+  margin-bottom: 10px;
+  font-size: 1rem;
+  color: #aaa;
+}
+
+audio {
+  width: 100%;
+}
+
+.transcript-box {
+  background: #1a1a1a;
+  border-radius: 8px;
+  padding: 16px;
+  min-height: 100px;
+  white-space: pre-wrap;
+  line-height: 1.6;
+}
+
+.transcript-box em {
+  color: #666;
+}
